@@ -77,6 +77,17 @@
 			
 			
 			//바꾸기  
+			$("#name").val("안도형");
+			$("#country").val(1).prop("selected",true);
+			$("input:checkbox[name=hobby]:checked").prop("checked", false);
+			$("input:checkbox[name=hobby]").eq(1).prop("checked",true);
+			$("input:radio[name=gender]").eq(0).prop("checked", true);			
+			
+			alert( $.trim($("#name").val() + (" 그리고 ") + 
+			($("#country").val() + (" 그리고 ") +
+			($("input:checkbox[name=hobby]:checked").val()) + (" 그리고 ") +
+			($("input:radio[name=gender]:checked").val()) + (" 입니다 ") 
+			 )));
 		});
 
     	
